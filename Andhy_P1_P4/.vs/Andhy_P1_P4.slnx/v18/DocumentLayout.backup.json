@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Parcial\\Andhy_P1_P4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99AD6871-CC1F-43A7-94BE-53C8BB41DBAC}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{99AD6871-CC1F-43A7-94BE-53C8BB41DBAC}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\.gitignore",
+              "RelativeDocumentMoniker": "Andhy_P1_P4\\.gitignore",
+              "ToolTip": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\.gitignore",
+              "RelativeToolTip": "Andhy_P1_P4\\.gitignore",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAAAHMBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-06T12:32:59.235Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

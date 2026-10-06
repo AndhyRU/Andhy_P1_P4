@@ -1,0 +1,6 @@
+@Andhy_P1_P4_HostAddress = http://localhost:5168
+
+GET {{Andhy_P1_P4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
