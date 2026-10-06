@@ -56,14 +56,40 @@ public class AutoresService (IConfiguration configuration)
         return await connection.QuerySingleAsync<AutoresRecordGet>(sql, new { Id });
     }
 
-    public async Task<AutoresRecordGet?> DeletByIdAsync(int Id)
+    public async Task<bool> DeletByIdAsync(int Id)
     {
-        const string sql = @"DELETE Autores WHERE Id = @IdAutores ";
+        const string sql = @"DELETE FROM Autores WHERE Id = @IdAutores ";
 
         var connection = CreateConnecion;
 
-        return await connection.QuerySingleAsync<AutoresRecordGet>(sql, new { Id });
+        int resultado = await connection.ExecuteAsync(sql, new { Id });
+
+        return resultado > 0;
     }
+
+    public async Task<bool> UpdateAsync(
+    int Id,
+    string Nombre,
+    string Nacionalidad,
+    DateOnly FechaNacimiento,
+    int Sueldo)
+    {
+        const string sql = @"UPDATE Autores
+                         SET Nombre = @Nombre,
+                             Nacionalidad = @Nacionalidad,
+                             FechaNacimiento = @FechaNacimiento,
+                             Sueldo = @Sueldo
+                         WHERE IdAutores = @Id";
+
+        var connection = CreateConnecion;
+
+        int resultado = await connection.ExecuteAsync(
+            sql,
+            new { Id, Nombre, Nacionalidad, FechaNacimiento, Sueldo });
+
+        return resultado > 0;
+    }
+
 
 
 }
