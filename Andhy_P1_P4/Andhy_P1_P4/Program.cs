@@ -1,4 +1,9 @@
+using Andhy_P1_P4.Services;
+using Scalar.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<AutoresService>();
 
 // Add services to the container.
 
@@ -8,11 +13,17 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
 {
-    app.MapOpenApi();
+    var service = scope.ServiceProvider
+        .GetRequiredService<AutoresService>();
+
+    await service.InitializeAsync();
 }
+
+
+app.MapOpenApi();
+app.MapScalarApiReference();
 
 app.UseHttpsRedirection();
 

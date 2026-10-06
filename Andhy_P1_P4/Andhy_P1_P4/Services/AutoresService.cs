@@ -7,14 +7,14 @@ namespace Andhy_P1_P4.Services;
 public class AutoresService (IConfiguration configuration)
 {
     private readonly string _connectionString =
-        configuration.GetConnectionString("Coneccion");
+        configuration.GetConnectionString("Coneccion")!;
 
     private SqliteConnection CreateConnecion =>
         new SqliteConnection(_connectionString);
 
     public async Task InitializeAsync()
     {
-        const string sql = @"CREATE TABLE IF NOT NOT EXISTS Autores (
+        const string sql = @"CREATE TABLE IF NOT EXISTS Autores (
               IdAutor INTEGER PRIMARY KEY AUTOINCREMENT,
               Nombre TEXT NOT NULL,
               Nacionalidad TEXT NOT NULL, 
@@ -49,7 +49,7 @@ public class AutoresService (IConfiguration configuration)
 
     public async Task<AutoresRecordGet?> GetByIdAsync(int Id)
     {
-        const string sql = @"SELECT IdAutor, Nombre, Nacionalidad, FechaNacimiento, Sueldo FROM Autores WHERE Id = @IdAutores ";
+        const string sql = @"SELECT IdAutor, Nombre, Nacionalidad, FechaNacimiento, Sueldo FROM Autores WHERE IdAutor = @Id ";
 
         var connection = CreateConnecion;
 
@@ -58,7 +58,7 @@ public class AutoresService (IConfiguration configuration)
 
     public async Task<bool> DeletByIdAsync(int Id)
     {
-        const string sql = @"DELETE FROM Autores WHERE Id = @IdAutores ";
+        const string sql = @"DELETE FROM Autores WHERE IdAutor = @Id ";
 
         var connection = CreateConnecion;
 
@@ -71,15 +71,15 @@ public class AutoresService (IConfiguration configuration)
     int Id,
     string Nombre,
     string Nacionalidad,
-    DateOnly FechaNacimiento,
-    int Sueldo)
+    string FechaNacimiento,
+    long Sueldo)
     {
         const string sql = @"UPDATE Autores
                          SET Nombre = @Nombre,
                              Nacionalidad = @Nacionalidad,
                              FechaNacimiento = @FechaNacimiento,
                              Sueldo = @Sueldo
-                         WHERE IdAutores = @Id";
+                         WHERE IdAutor = @Id";
 
         var connection = CreateConnecion;
 

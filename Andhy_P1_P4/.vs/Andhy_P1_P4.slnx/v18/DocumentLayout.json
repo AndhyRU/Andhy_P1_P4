@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Parcial\\Andhy_P1_P4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\models\\autoresrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\models\\autoresrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\services\\autoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\services\\autoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\models\\autoresrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\models\\autoresrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|solutionrelative:andhy_p1_p4\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CCF74F2-0EC3-439D-EBA4-1BF89A867CA5}|Andhy_P1_P4\\Andhy_P1_P4.csproj|c:\\parcial\\andhy_p1_p4\\andhy_p1_p4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\appsettings.json",
               "RelativeDocumentMoniker": "Andhy_P1_P4\\appsettings.json",
@@ -43,51 +47,61 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-10-06T12:44:55.952Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Program.cs",
+              "RelativeDocumentMoniker": "Andhy_P1_P4\\Program.cs",
+              "ToolTip": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Program.cs",
+              "RelativeToolTip": "Andhy_P1_P4\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T14:02:17.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AutorController.cs",
               "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Controllers\\AutorController.cs",
               "RelativeDocumentMoniker": "Andhy_P1_P4\\Controllers\\AutorController.cs",
               "ToolTip": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Controllers\\AutorController.cs",
               "RelativeToolTip": "Andhy_P1_P4\\Controllers\\AutorController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAABYAAACEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-06T13:24:21.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AutoresService.cs",
               "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Services\\AutoresService.cs",
               "RelativeDocumentMoniker": "Andhy_P1_P4\\Services\\AutoresService.cs",
               "ToolTip": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Services\\AutoresService.cs",
               "RelativeToolTip": "Andhy_P1_P4\\Services\\AutoresService.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAADwv0kAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-06T12:44:13.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AutoresRecord.cs",
               "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Models\\AutoresRecord.cs",
               "RelativeDocumentMoniker": "Andhy_P1_P4\\Models\\AutoresRecord.cs",
               "ToolTip": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\Models\\AutoresRecord.cs",
               "RelativeToolTip": "Andhy_P1_P4\\Models\\AutoresRecord.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-06T12:37:14.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-06T12:37:14.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Parcial\\Andhy_P1_P4\\Andhy_P1_P4\\.gitignore",
               "RelativeDocumentMoniker": "Andhy_P1_P4\\.gitignore",
@@ -95,8 +109,7 @@
               "RelativeToolTip": "Andhy_P1_P4\\.gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMBAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-06T12:32:59.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-06T12:32:59.235Z"
             }
           ]
         }

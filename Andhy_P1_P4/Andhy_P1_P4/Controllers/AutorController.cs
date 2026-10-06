@@ -16,7 +16,7 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpPut ("{id : int}")]
+    [HttpPut ("{id:int}")]
 
     public async Task<IActionResult> UpdateAsync(int id, AutoresRecordSet autor)
     {
@@ -25,14 +25,14 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpDelete ("borrar/ {id : int}")]
+    [HttpDelete ("borrar/{id:int}")]
 
     public async Task<IActionResult> DeletByIdAsync (int id) 
     {
         var resultado = await autoresService.DeletByIdAsync (id);
 
         if (resultado == false)
-            NotFound("No se encuntra el Autor Selecionado");
+            return NotFound("No se encuntra el Autor Selecionado");
 
         if (resultado == true)
             return Ok("Autor eliminado correctamente");
@@ -43,15 +43,15 @@ public class AutorController (AutoresService autoresService) : ControllerBase
     [HttpGet("lista")]
     public async Task<IActionResult> GetListAsync ()
     {
-        var resultado = autoresService.GetListAsync();
+        var resultado = await autoresService.GetListAsync();
 
         return Ok(resultado);
     }
 
-    [HttpGet("lista/ {id : int}")]
+    [HttpGet("lista/{id:int}")]
     public async Task<IActionResult> GetByIdAsync(int id)
     {
-        var resultado = autoresService.GetByIdAsync (id);
+        var resultado = await autoresService.GetByIdAsync (id);
 
         return Ok(resultado);
     }
