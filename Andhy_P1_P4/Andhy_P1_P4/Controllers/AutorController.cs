@@ -16,7 +16,7 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpPut ("{id:int}")]
+    [HttpPut ("{id}")]
 
     public async Task<IActionResult> UpdateAsync(int id, AutoresRecordSet autor)
     {
@@ -25,7 +25,7 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpDelete ("borrar/{id:int}")]
+    [HttpDelete ("{id}")]
 
     public async Task<IActionResult> DeletByIdAsync (int id) 
     {
@@ -40,7 +40,7 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpGet("lista")]
+    [HttpGet]
     public async Task<IActionResult> GetListAsync ()
     {
         var resultado = await autoresService.GetListAsync();
@@ -48,7 +48,7 @@ public class AutorController (AutoresService autoresService) : ControllerBase
         return Ok(resultado);
     }
 
-    [HttpGet("lista/{id:int}")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetByIdAsync(int id)
     {
         var resultado = await autoresService.GetByIdAsync (id);
