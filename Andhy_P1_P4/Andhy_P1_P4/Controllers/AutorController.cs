@@ -22,7 +22,13 @@ public class AutorController (AutoresService autoresService) : ControllerBase
     {
         var resultado = await autoresService.UpdateAsync(id, autor.Nombre, autor.Nacionalidad, autor.FechaNacimiento, autor.Sueldo);
 
-        return Ok(resultado);
+        if (resultado == false)
+            return NotFound("El autor no existe");
+
+        var autorActualizado = await autoresService.GetByIdAsync(id);
+
+        return Ok(autorActualizado);
+
     }
 
     [HttpDelete ("{id}")]
