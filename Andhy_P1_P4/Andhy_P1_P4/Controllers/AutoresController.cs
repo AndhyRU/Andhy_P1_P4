@@ -6,7 +6,7 @@ namespace Andhy_P1_P4.Controllers;
 
 [ApiController]
 [Route("api/[Controller]")]
-public class AutorController (AutoresService autoresService) : ControllerBase
+public class AutoresController (AutoresService autoresService) : ControllerBase
 {
     [HttpPost]
     public async Task <IActionResult> SaveAsync (AutoresRecordSet autor)
