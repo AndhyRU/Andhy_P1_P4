@@ -74,7 +74,10 @@ public class AutoresService (IConfiguration configuration)
     string FechaNacimiento,
     long Sueldo)
     {
-        const string sql = @"UPDATE Autores
+        const string sql = @" SELECT * FROM Autores
+                         WHERE IdAutor = @Id;
+
+                         UPDATE Autores
                          SET Nombre = @Nombre,
                              Nacionalidad = @Nacionalidad,
                              FechaNacimiento = @FechaNacimiento,
