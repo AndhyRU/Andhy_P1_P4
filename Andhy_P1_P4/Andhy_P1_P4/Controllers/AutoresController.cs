@@ -14,8 +14,7 @@ public class AutoresController (AutoresService autoresService) : ControllerBase
         var resultado = await autoresService.SaveAsync(Autor);
 
         if (resultado == false)
-            NotFound ("No Se pudo Guardar el Autor");
-
+            return NotFound ("No Se pudo Guardar el Autor");
       
         return Ok(Autor);
     }
