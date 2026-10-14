@@ -1,5 +1,6 @@
 ﻿using Andhy_P1_P4.Models;
 using Dapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Data.Sqlite;
 
 namespace Andhy_P1_P4.Services;
@@ -16,7 +17,7 @@ public class AutoresService (IConfiguration configuration)
     {
         const string sql = @"CREATE TABLE IF NOT EXISTS Autores (
               IdAutor INTEGER PRIMARY KEY AUTOINCREMENT,
-              Nombre TEXT NOT NULL,
+              Nombres TEXT NOT NULL,
               Nacionalidad TEXT NOT NULL, 
               FechaNacimiento TEXT NOT NULL,
               Sueldo INTEGER NOT NULL)";
@@ -28,19 +29,22 @@ public class AutoresService (IConfiguration configuration)
 
     public async Task<bool> SaveAsync(AutoresRecordSet Autor)
     {
-        const string sql = @"INSERT INTO Autores (Nombre, Nacionalidad, Fechanacimiento, Sueldo)
-        VALUES (@Nombre, @Nacionalidad, @FechaNacimiento, @Sueldo)";
+        const string sql = @"
+        INSERT INTO Autores
+        (Nombres, Nacionalidad, FechaNacimiento, Sueldo)
+        VALUES (@Nombres, @Nacionalidad, @FechaNacimiento, @Sueldo)
+        RETURNING IdAutor, Nombres, Nacionalidad, FechaNacimiento, Sueldo";
 
-        var connection = CreateConnecion;
+        using var connection = CreateConnecion;
 
-        int lista = await connection.ExecuteAsync(sql, Autor);
+        var resultado = await connection.ExecuteAsync(sql, Autor);
 
-        return lista > 0;
+        return resultado > 0;
     }
 
     public async Task<IEnumerable<AutoresRecordGet>> GetListAsync ()
     {
-        const string sql = @"SELECT IdAutor, Nombre, Nacionalidad, FechaNacimiento, Sueldo FROM Autores ";
+        const string sql = @"SELECT IdAutor, Nombres, Nacionalidad, FechaNacimiento, Sueldo FROM Autores ";
 
         var connection = CreateConnecion;
 
@@ -49,11 +53,12 @@ public class AutoresService (IConfiguration configuration)
 
     public async Task<AutoresRecordGet?> GetByIdAsync(int Id)
     {
-        const string sql = @"SELECT IdAutor, Nombre, Nacionalidad, FechaNacimiento, Sueldo FROM Autores WHERE IdAutor = @Id ";
+        const string sql = @"SELECT IdAutor, Nombres, Nacionalidad, FechaNacimiento, Sueldo FROM Autores WHERE IdAutor = @Id ";
 
         var connection = CreateConnecion;
 
-        return await connection.QuerySingleAsync<AutoresRecordGet>(sql, new { Id });
+        return await connection.QuerySingleOrDefaultAsync<AutoresRecordGet>(
+    sql, new { Id });
     }
 
     public async Task<bool> DeletByIdAsync(int Id)
@@ -69,7 +74,7 @@ public class AutoresService (IConfiguration configuration)
 
     public async Task<bool> UpdateAsync(
     int Id,
-    string Nombre,
+    string Nombres,
     string Nacionalidad,
     string FechaNacimiento,
     long Sueldo)
@@ -78,7 +83,7 @@ public class AutoresService (IConfiguration configuration)
                          WHERE IdAutor = @Id;
 
                          UPDATE Autores
-                         SET Nombre = @Nombre,
+                         SET Nombres = @Nombres,
                              Nacionalidad = @Nacionalidad,
                              FechaNacimiento = @FechaNacimiento,
                              Sueldo = @Sueldo
@@ -88,7 +93,7 @@ public class AutoresService (IConfiguration configuration)
 
         int resultado = await connection.ExecuteAsync(
             sql,
-            new { Id, Nombre, Nacionalidad, FechaNacimiento, Sueldo });
+            new { Id, Nombres, Nacionalidad, FechaNacimiento, Sueldo });
 
         return resultado > 0;
     }

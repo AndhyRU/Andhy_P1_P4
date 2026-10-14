@@ -9,18 +9,22 @@ namespace Andhy_P1_P4.Controllers;
 public class AutoresController (AutoresService autoresService) : ControllerBase
 {
     [HttpPost]
-    public async Task <IActionResult> SaveAsync (AutoresRecordSet autor)
+    public async Task<IActionResult> SaveAsync(AutoresRecordSet Autor)
     {
-        var resultado = await autoresService.SaveAsync (autor);
+        var resultado = await autoresService.SaveAsync(Autor);
 
-        return Ok(resultado);
+        if (resultado == false)
+            NotFound ("No Se pudo Guardar el Autor");
+
+      
+        return Ok(Autor);
     }
 
     [HttpPut ("{id}")]
 
     public async Task<IActionResult> UpdateAsync(int id, AutoresRecordSet autor)
     {
-        var resultado = await autoresService.UpdateAsync(id, autor.Nombre, autor.Nacionalidad, autor.FechaNacimiento, autor.Sueldo);
+        var resultado = await autoresService.UpdateAsync(id, autor.Nombres, autor.Nacionalidad, autor.FechaNacimiento, autor.Sueldo);
 
         if (resultado == false)
             return NotFound("El autor no existe");
@@ -58,6 +62,9 @@ public class AutoresController (AutoresService autoresService) : ControllerBase
     public async Task<IActionResult> GetByIdAsync(int id)
     {
         var resultado = await autoresService.GetByIdAsync (id);
+
+        if (resultado == null)
+            return NotFound("El autor no existe");
 
         return Ok(resultado);
     }
